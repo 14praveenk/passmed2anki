@@ -1,0 +1,53 @@
+#pm-anki-button {
+  appearance: none;
+  border: none;
+  border-radius: 999px;
+  padding: 0.55rem 1.5rem;
+  background: linear-gradient(120deg, #0f9d58, #0b7b43);
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(15, 157, 88, 0.25);
+  transition: transform 120ms ease, box-shadow 120ms ease, opacity 200ms ease;
+  margin: 0.75rem 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+#pm-anki-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+#pm-anki-button:not(:disabled):hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 26px rgba(15, 157, 88, 0.3);
+}
+
+#pm-anki-toast {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  background: #1f2933;
+  color: #fff;
+  padding: 0.75rem 1.25rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(16px);
+  transition: opacity 200ms ease, transform 200ms ease, background 200ms ease;
+  z-index: 2147483647;
+}
+
+#pm-anki-toast[data-state="error"] {
+  background: #b91c1c;
+}
+
+#pm-anki-toast.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

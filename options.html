@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Passmedicine → Anki Settings</title>
+    <link rel="stylesheet" href="options.css" />
+  </head>
+  <body>
+    <main class="options">
+      <header>
+        <h1>Passmedicine → Anki</h1>
+        <p>Configure how notes are created through AnkiConnect.</p>
+      </header>
+
+      <section id="first-run" class="first-run" hidden>
+        <h2>First time setup</h2>
+        <ol>
+          <li>Install the <b>AnkiConnect</b> add-on in Anki (Code: <b>2055492159</b>), then restart Anki.</li>
+          <li>Keep <b>Anki desktop open</b> while using Passmedicine.</li>
+          <li>Set your <b>Deck name</b> and <b>Note type</b> below (they must exist in Anki).</li>
+          <li>Open Passmedicine, reveal an answer, then click <b>Add to Anki</b>.</li>
+        </ol>
+        <p class="first-run-note">This message will disappear after you save settings.</p>
+      </section>
+
+      <form id="settings-form">
+        <label>
+          Deck name
+          <input type="text" id="deckName" required />
+        </label>
+        <label>
+          Note type (model)
+          <input type="text" id="noteType" required />
+        </label>
+        <label>
+          Tags (comma separated)
+          <input type="text" id="tags" />
+        </label>
+        <div class="actions">
+          <button type="submit">Save settings</button>
+          <span id="status" role="status"></span>
+        </div>
+      </form>
+      <section class="help">
+        <h2>Prerequisites</h2>
+        <ol>
+          <li>Install the AnkiConnect add-on (Code: 2055492159) inside Anki.</li>
+          <li>Keep Anki running while you use Passmedicine.</li>
+          <li>Ensure the deck and note type above exist in Anki.</li>
+        </ol>
+      </section>
+    </main>
+    <script src="options.js"></script>
+  </body>
+</html>

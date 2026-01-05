@@ -1,0 +1,41 @@
+{
+  "manifest_version": 3,
+  "name": "Passmedicine to Anki",
+  "description": "Adds an “Add to Anki” button on Passmedicine after you submit an answer, saving the question and explanation to Anki via AnkiConnect.",
+  "version": "0.1.0",
+  "permissions": ["storage"],
+  "host_permissions": [
+    "https://*.passmedicine.com/*",
+    "https://passmedicine.com/*",
+    "http://127.0.0.1:8765/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.passmedicine.com/*",
+        "https://passmedicine.com/*"
+      ],
+      "js": ["contentScript.js"],
+      "css": ["contentScript.css"],
+      "run_at": "document_idle",
+      "all_frames": true
+    }
+  ],
+  "background": {
+    "scripts":["background.js"]
+
+  },
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "hello@quse.link",
+      "strict_min_version": "109.0",
+      "data_collection_permissions": {
+        "required": ["websiteContent"]
+      }
+    }
+  }
+}
