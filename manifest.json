@@ -1,9 +1,14 @@
 {
   "manifest_version": 3,
   "name": "Passmedicine to Anki",
-  "description": "Adds an “Add to Anki” button on Passmedicine after you submit an answer, saving the question and explanation to Anki via AnkiConnect.",
+  "description": "Adds an “Add to Anki” button on Passmedicine after you submit an answer.",
   "version": "0.1.0",
   "permissions": ["storage"],
+  "icons": {
+    "16": "images/icon-16.png",
+    "48": "images/icon-48.png",
+    "128": "images/icon-128.png"
+  },
   "host_permissions": [
     "https://*.passmedicine.com/*",
     "https://passmedicine.com/*",
